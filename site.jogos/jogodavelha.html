@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Jogo da Velha Noturno 🎮</title>
+<link rel="stylesheet" href="jogodavelha.css">
+</head>
+<body>
+
+ <h1>🎮 Jogo da Velha Noturno</h1><br><br><br><br>
+
+<div class="modo">
+  <label style="color:#ccc;">Modo de jogo: </label>
+  <select id="modo">
+    <option value="2p">👫 Dois Jogadores</option>
+    <option value="bot">🤖 Contra o Robô</option>
+  </select>
+</div>
+
+<div class="tabuleiro" id="tabuleiro">
+  <div id="linha-vitoria"></div>
+</div>
+
+<p id="mensagem">Vez do jogador: X</p>
+
+<div class="placar">
+
+  <div id="placar2p">
+    👥 X: <span id="pontosX">0</span> |
+    O: <span id="pontosO">0</span>
+  </div>
+
+  <div id="placarBot" style="display:none;">
+    🤖 Você: <span id="pontosPlayer">0</span> |
+    Robô: <span id="pontosBot">0</span>
+  </div>
+
+</div>
+
+<button type="button" onclick="reiniciar()">Reiniciar</button>
+
+<canvas id="confete"></canvas>
+
+<button>
+  <a href="../paginalogin/Site.html">← Voltar à Página Inicial</a>
+</button>
+
+<script src="jogodavelha.js"></script>
+
+</body>
+</html>

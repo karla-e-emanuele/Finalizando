@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎮 Jogos Interativos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body>
+  <link rel="stylesheet" href="site.css">
+
+  <link rel="stylesheet"
+  href="http://127.0.0.1:5500/P.I-master/site.css">
+</head>
+<header>
+  <h1>🎮 Jogos Interativos</h1>
+  <p id="frase">Escolha um jogo e comece a diversão!</p>
+
+  <div class="mt-3">
+    <button id="temaBtn" class="btn btn-light me-2">🌙 Modo Escuro</button>
+    <audio id="bgMusic" src="musica.mp3" loop></audio>
+  </div>
+
+  <div class="userpage">
+    <button class="button"><a href="../paginaUsuario/UserPage.html">Pagina do usuario</a></button>
+  </div>
+</header>
+
+<main class="container" id="jogos">
+  <div class="row g-4">
+
+    <div class="col-12 col-md-6 d-flex">
+      <a href="../site.jogos/quizfilme.html" class="card text-decoration-none w-100">
+        <div>
+          <i class="fas fa-film"></i>
+          <h2 class="card-title">Quiz de Filmes</h2>
+          <p class="card-text">Teste o quanto você sabe sobre filmes populares!</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex">
+      <a href="../site.jogos/quizserie.html" class="card text-decoration-none w-100">
+        <div>
+          <i class="fas fa-tv"></i>
+          <h2 class="card-title">Quiz de Séries</h2>
+          <p class="card-text">Desafie seus conhecimentos sobre séries famosas!</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex">
+      <a href="../site.jogos/cobrinha.html" class="card text-decoration-none w-100">
+        <div>
+          <i class="fas fa-gamepad"></i>
+          <h2 class="card-title">Jogo da Cobrinha</h2>
+          <p class="card-text">Pegue a comida e nao deixe a cobrinha bater.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex">
+      <a href="../site.jogos/jogodavelha.html" class="card text-decoration-none w-100">
+        <div>
+          <i class="fas fa-times-circle"></i>
+          <h2 class="card-title">Jogo da Velha Noturno</h2>
+          <p class="card-text">Desafie um amigo ou o robô neste clássico com visual moderno!</p>
+        </div>
+      </a>
+    </div>
+  </a>
+
+  </div>
+</main>
+<script src="site.js"></script>
+<footer>
+  &copy; 2025 Jogos Interativos. Feito com 💖 
+</footer>
+
+</body>
+</html>

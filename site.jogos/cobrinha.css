@@ -1,0 +1,104 @@
+﻿:root {
+  --bg: #0b1020;
+  --card: #121a31;
+  --card-soft: #1a2444;
+  --text: #e7ecff;
+  --muted: #9db0e2;
+  --snake: #22c55e;
+  --snake-head: #16a34a;
+  --food: #f97316;
+  --accent: #3b82f6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #ffe1f5 40%, #370150 100%);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  padding: 16px;
+}
+
+.app {
+  width: min(760px, 100%);
+  background: rgba(18, 26, 49, 0.88);
+  border: 1px solid #2b3a66;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+
+.top h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.top p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.hud {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.panel {
+  background: var(--card-soft);
+  border: 1px solid #30457b;
+  border-radius: 10px;
+  padding: 8px 12px;
+  min-width: 120px;
+}
+
+.panel span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+#restart {
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #22c55e, var(--accent));
+  color: white;
+  font-weight: 700;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+#game {
+  width: min(92vw, 560px);
+  height: min(92vw, 560px);
+  display: block;
+  margin: 12px auto 0;
+  background: #0a1328;
+  border: 2px solid #2d4272;
+  border-radius: 12px;
+}
+
+.hint {
+  margin: 10px 0 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.status {
+  margin: 4px 0 0;
+  text-align: center;
+  font-weight: 700;
+  color: #93c5fd;
+  min-height: 1.4em;
+}
+
+@media (max-width: 600px) {
+  .panel { min-width: 106px; }
+}

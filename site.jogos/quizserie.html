@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerte a Série pela Cena</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="quizserie.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Acerte a Série pela Cena 📺</h1>
+    <div id="gameBox"></div>
+    <button>
+      <a href="../paginalogin/Site.html">← Voltar à Página Inicial</a>
+  </button>
+  </div>
+
+  <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-success" id="resultModalLabel">Resultado Final</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body" id="resultText" style="font-weight:600; font-size:1.2rem;"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="recomecarJogo()" data-bs-dismiss="modal">Recomeçar Jogo</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="quizserie.js"></script>
+
+</body>
+</html>
+
+
+
+

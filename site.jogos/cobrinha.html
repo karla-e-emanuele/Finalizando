@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="cobrinha.css" />
+
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Jogo da Cobrinha</h1>
+      <p>Pegue a comida, cresça e bata seu recorde.</p>
+    </header>
+
+    <section class="hud">
+      <div class="panel">
+        <span>Pontuação</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="panel">
+        <span>Recorde</span>
+        <strong id="best">0</strong>
+      </div>
+      <button id="restart">Reiniciar</button>
+    </section>
+
+    <canvas id="game" width="480" height="480" aria-label="Tabuleiro do jogo da cobrinha"></canvas>
+
+    <p class="hint">Use as setas do teclado ou WASD para jogar.</p>
+    <p id="status" class="status">Pressione uma direção para começar.</p>
+
+    <div class="footer-link">
+      <a href="../paginalogin/Site.html">← Voltar à Página Inicial</a>
+    </div>
+    
+  </main>
+
+  <script src="cobrinha.js"></script>
+</body>
+</html>

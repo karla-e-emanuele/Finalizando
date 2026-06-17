@@ -1,0 +1,125 @@
+body {
+    background: linear-gradient(135deg, #ffe1f5 40%, #370150 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: #0a0404;
+    transition: background 0.5s, color 0.5s;
+    animation: fadeIn 1s ease-in;
+
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  header {
+    padding: 40px 0 20px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.15);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  header h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  }
+
+  #frase {
+    font-size: 1.2rem;
+    color: #2b1212;
+  }
+
+  main.container {
+    max-width: 960px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 15px;
+    color: #0e0404;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.3);
+    text-decoration: none;
+  }
+
+  .card i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    width: 90%;
+    max-width: 200px;
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    background-color: #ffffff; 
+    padding: 10px 20px;
+    border-radius: 12px; 
+    border: none;
+    border-radius: 10px;
+  }
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #2b1212;
+    background: rgba(0,0,0,0.1);
+  }
+
+  .dark {
+    background: linear-gradient(135deg, #1e1e1e, #343434);
+    color: #fff;
+  }
+
+  .dark header {
+    background-color: rgba(255,255,255,0.1);
+  }
+
+  .dark .card {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+
+  .dark footer {
+    color: #ccc;
+    background: rgba(255,255,255,0.05);
+  }
