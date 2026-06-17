@@ -1,0 +1,191 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe1f5 40%, #370150 100%);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    
+  }
+
+  h1 {
+    color: #eee;
+    text-shadow: 0 0 10px rgba(200, 0, 255, 0.5);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .modo {
+    margin-bottom: 15px;
+  }
+
+  select {
+    background: #be05cf;
+    color: #eee;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    box-shadow: 0 0 10px rgba(200,0,255,0.3);
+  }
+
+  .tabuleiro {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 110px);
+    gap: 10px;
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.8), inset 0 0 10px rgba(255,255,255,0.05);
+  }
+
+  .celula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #e0e0e0;
+    background: linear-gradient(145deg, #3a003f, #1c001f);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+  }
+
+  .celula:hover {
+    transform: scale(1.08);
+    background: linear-gradient(145deg, #4a004f, #2c002f);
+    box-shadow: 0 0 10px rgba(200, 0, 255, 0.3);
+  }
+
+  .vencedora {
+    animation: brilho 1.5s infinite alternate;
+    box-shadow: 0 0 15px rgba(200,0,255,0.7);
+  }
+
+  @keyframes brilho {
+    from { box-shadow: 0 0 15px rgba(200,0,255,0.7); }
+    to { box-shadow: 0 0 35px rgba(255,0,255,1); transform: scale(1.1); }
+  }
+
+  #linha-vitoria {
+    position: absolute;
+    z-index: 10;
+    height: 6px;
+    background: white;
+    border-radius: 6px;
+    transform-origin: left center;
+    opacity: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(200,0,255,0.4));
+    width: 0;
+    transition: opacity 0.3s ease, width 0.7s ease-out;
+  }
+
+  #mensagem {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #ccc;
+    text-shadow: 0 0 6px rgba(200,0,255,0.3);
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 10px 22px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8a0796, #e062ee);
+    color: #eee;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(200,0,255,0.2);
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #4a004f, #3a003f);
+    box-shadow: 0 0 15px rgba(200,0,255,0.4);
+  }
+
+  canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .placar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #placar2p,
+  #placarBot {
+    background: linear-gradient(145deg, #3a003f, #220026);
+    border: 2px solid rgba(200, 0, 255, 0.3);
+    border-radius: 15px;
+    padding: 12px 24px;
+    color: #f3e8ff;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow:
+      0 0 15px rgba(200, 0, 255, 0.25),
+      inset 0 0 10px rgba(255,255,255,0.05);
+    text-align: center;
+    min-width: 220px;
+    transition: 0.3s;
+  }
+  
+  #placar2p:hover,
+  #placarBot:hover {
+    transform: scale(1.03);
+    box-shadow:
+      0 0 25px rgba(200, 0, 255, 0.45),
+      inset 0 0 12px rgba(255,255,255,0.08);
+  }
+  
+  #placar2p span,
+  #placarBot span {
+    color: #ff9dff;
+    font-size: 1.3em;
+    margin: 0 4px;
+  }
+  
+  .ponto {
+    color: #eee;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(200,0,255,0.3);
+  }
+  
+  .ponto span {
+    color: #e062ee;
+    font-size: 1.2em;
+  }
+
+  .voltar {
+    margin-top: 15px;
+    padding: 10px 22px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #8a0796, #e062ee);
+    color: #eee;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(200,0,255,0.2);
+  }
+  
+  .voltar:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #4a004f, #3a003f);
+    box-shadow: 0 0 15px rgba(200,0,255,0.4);
+  }

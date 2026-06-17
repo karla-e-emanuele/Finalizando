@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffe1f5 40%, #370150 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.jogo {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #ff00d4; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #2a2a2a;
+    color: white;
+    box-sizing: border-box; 
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff00ea;
+}
+
+.jogo p {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 5px;
+    color: #ccc;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #ff00b3;
+}
+
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff00bf;
+    border: none;
+    border-radius: 5px;
+    color: #121212;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #00cc6e;
+    transform: scale(1.02);
+}
+
+
+a {
+    text-decoration: none;
+    color: #00ff88;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.jogo > p:last-of-type {
+    margin-top: 20px;
+    display: block;
+    font-size: 13px;
+    color: #888;
+}

@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(135deg, #23022E, #FFE1F5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+  }
+  .game-container {
+    background: #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 25px 35px;
+    max-width: 720px;
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    color: #2f4f4f;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+ 
+  .score-display {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2f4f4f;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  .options button {
+    width: 80%;
+    background: #4b0082;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  .options button:hover {
+    background: #ffd8fd;
+  }
+  /* NOVO: Estilos de Feedback Imediato */
+  .options button.correct {
+    background: #28a745 !important; /* Verde - Acerto */
+    color: white;
+    pointer-events: none;
+    opacity: 1;
+  }
+  .options button.wrong {
+    background: #dc3545 !important; /* Vermelho - Erro */
+    color: white;
+    pointer-events: none;
+  }
+  .options button:disabled {
+    opacity: 0.6; /* Escurece botões não clicáveis após a resposta */
+    cursor: not-allowed;
+  }
+  /* Fim Estilos de Feedback */
+  .footer-link {
+    margin-top: 20px;
+  }
+  .footer-link a {
+    color: #2f4f4f;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .footer-link a:hover {
+    text-decoration: underline;
+  }
