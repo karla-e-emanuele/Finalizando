@@ -2,7 +2,7 @@ const cenas = [
     {
       imagem: "https://cdn.jornaldaparaiba.com.br/img/inline/170000/1400x667/Meninas-Malvadas-confira-curiosidades-e-fatos-sobr0017571800202410030808/scaleDownOutsideFillBackground-1.webp?fallback=https%3A%2F%2Fcdn.jornaldaparaiba.com.br%2Fimg%2Finline%2F170000%2FMeninas-Malvadas-confira-curiosidades-e-fatos-sobr0017571800202410030808.png%3Fxid%3D1072898&xid=1072898",
       pergunta: "De qual filme é esta cena?",
-      opcoes: ["As Branquelas", "Meninas Malvadas", "Legalmente Loira", "Miss Simpatia"],
+      opcoes: ["Banco Central sob Ataque", "Meninas Malvadas", "Berlim", "Lupin"],
       correta: 1
     },
     {
@@ -63,18 +63,31 @@ const cenas = [
 
   let atual = 0;
   let pontos = 0;
+  let melhorPontuacao = Number(localStorage.getItem('quizFilme')) || 0;
 
   const gameBox = document.getElementById('gameBox');
 
   function carregarCena() {
     const c = cenas[atual];
+  
     gameBox.innerHTML = `
-      <p style="font-weight:600; font-size:1.2rem;">${atual + 1}. ${c.pergunta}</p>
+      <p style="font-weight:600; font-size:1.2rem;">
+        ${atual + 1}. ${c.pergunta}
+      </p>
+  
       <img src="${c.imagem}" alt="Cena do filme">
-      <div class="score-display">Pontos: ${pontos} / ${cenas.length}</div>
-      <div class="options">
-        ${c.opcoes.map((op, i) => `<button onclick="verificar(${i})">${op}</button>`).join('')}
+  
+      <div class="score-display">
+        🎯 Pontos: ${pontos} / ${cenas.length}<br>
+        🏆 Melhor pontuação: ${melhorPontuacao}
       </div>
+  
+      <div class="options">
+        ${c.opcoes.map((op, i) =>
+          `<button onclick="verificar(${i})">${op}</button>`
+        ).join('')}
+      </div>
+  
       <p>${atual + 1} de ${cenas.length}</p>
     `;
   }
@@ -89,6 +102,11 @@ const cenas = [
     // 2. Aplica feedback visual
     if (opcaoSelecionada === c.correta) {
       pontos++;
+
+if (pontos > melhorPontuacao) {
+  melhorPontuacao = pontos;
+  localStorage.setItem('quizFilme', melhorPontuacao);
+}
       buttons[opcaoSelecionada].classList.add('correct');
     } else {
       buttons[opcaoSelecionada].classList.add('wrong');

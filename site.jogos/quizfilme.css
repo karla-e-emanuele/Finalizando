@@ -1,6 +1,6 @@
 
     body {
-      background: linear-gradient(135deg, #ffe1f5 40%, #370150 100%);
+      background: linear-gradient(135deg, #4d6797, #21304b);
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -44,6 +44,7 @@
     
       animation: brilhoScore 2s infinite alternate;
     }
+    
     @keyframes brilhoScore {
       from {
         transform: scale(1);
@@ -79,7 +80,7 @@
     }
     /* Estilos de Feedback Imediato */
     .options button:hover {
-      background: #ffd8fd;
+      background: #6a5acd;
     }
     .options button.correct {
       background: #28a745 !important; /* Verde - Acerto */
